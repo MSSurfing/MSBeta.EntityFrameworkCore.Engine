@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Src\Microsoft.EntityFrameworkCore.Engine\Microsoft.EntityFrameworkCore.Engine.csproj" />
+    <ProjectReference Include="..\MSSurfing.Data.NetCore\MSSurfing.Data.NetCore.csproj" />
+  </ItemGroup>
+
+</Project>
