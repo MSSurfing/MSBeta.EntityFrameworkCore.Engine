@@ -8,7 +8,7 @@ namespace Microsoft.EntityFrameworkCore.Engine
     public partial class EfeRepository<T> : IRepository<T> where T : class
     {
         #region Fields
-        private readonly IDbContext _context;
+        private IDbContext _context;
         private DbSet<T> _dbSet;
         protected virtual DbSet<T> Entities
         {
@@ -226,6 +226,12 @@ namespace Microsoft.EntityFrameworkCore.Engine
             foreach (var entity in entities)
                 if (this.Entities.Contains(entity))
                     _context.Detach(entity);
+        }
+
+        public void Dispose()
+        {
+            _context = null;
+            _dbSet = null;
         }
         #endregion
     }

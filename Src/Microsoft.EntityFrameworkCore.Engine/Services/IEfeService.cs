@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Microsoft.EntityFrameworkCore.Engine.Services
 {
-    public interface IEfeService<T>
+    public interface IEfeService<T> : IDisposable
     {
         T GetById(object Id);
         bool Insert(T t);

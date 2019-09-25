@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Microsoft.EntityFrameworkCore.Engine
 {
-    public partial interface IRepository<T> where T : class
+    public partial interface IRepository<T> : IDisposable where T : class
     {
         #region Properties
         IQueryable<T> Table { get; }

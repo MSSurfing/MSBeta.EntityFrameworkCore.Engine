@@ -5,7 +5,7 @@ namespace Microsoft.EntityFrameworkCore.Engine.Services
     public abstract class EfeDefaultService<T> : IEfeService<T> where T : class
     {
         #region Fields
-        protected readonly IRepository<T> _repository;
+        protected IRepository<T> _repository;
         #endregion
 
         public EfeDefaultService(IRepository<T> repository)
@@ -40,6 +40,11 @@ namespace Microsoft.EntityFrameworkCore.Engine.Services
                 throw new ArgumentNullException(nameof(T));
 
             return _repository.Delete(t) > 0;
+        }
+
+        public void Dispose()
+        {
+            _repository = null;
         }
     }
 }

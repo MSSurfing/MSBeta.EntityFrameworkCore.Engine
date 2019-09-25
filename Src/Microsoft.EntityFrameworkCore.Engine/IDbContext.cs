@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Microsoft.EntityFrameworkCore.Engine
 {
-    public interface IDbContext
+    public interface IDbContext : IDisposable
     {
         DatabaseFacade Database { get; }
         ChangeTracker ChangeTracker { get; }
