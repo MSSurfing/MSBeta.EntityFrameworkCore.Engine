@@ -230,6 +230,7 @@ namespace Microsoft.EntityFrameworkCore.Engine
 
         public void Dispose()
         {
+            _context.Dispose();
             _context = null;
             _dbSet = null;
         }
