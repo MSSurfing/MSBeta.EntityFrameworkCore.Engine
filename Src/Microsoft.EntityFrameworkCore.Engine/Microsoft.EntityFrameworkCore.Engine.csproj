@@ -7,9 +7,9 @@
     <Authors>MsSurfing</Authors>
     <Product>MsSurfing.Beta</Product>
     <Company>MsSurfing</Company>
-    <AssemblyVersion>4.0.6.0</AssemblyVersion>
-    <FileVersion>4.0.6.1</FileVersion>
-    <Version>4.0.6-preview</Version>
+    <AssemblyVersion>5.0.0.5</AssemblyVersion>
+    <FileVersion>5.0.0.5</FileVersion>
+    <Version>5.0.0-preview</Version>
     <PackageProjectUrl>https://github.com/MSSurfing/MSBeta.EntityFrameworkCore.Engine</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>

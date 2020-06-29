@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Engine;
+using Microsoft.EntityFrameworkCore.Engine.Readonly;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,12 +16,14 @@ namespace Z.EfCore.NormalSamples.Services.Users
 
         #region Fields
         private readonly IRepository<User> _userRepository;
+        private readonly IReadonlyRepository<User> _userReadRepository;
         #endregion
 
         #region Ctor
-        public UserService(IRepository<User> userRepository)
+        public UserService(IRepository<User> userRepository, IReadonlyRepository<User> userReadRepository)
         {
             _userRepository = userRepository;
+            _userReadRepository = userReadRepository;
         }
         #endregion
 
@@ -31,7 +34,7 @@ namespace Z.EfCore.NormalSamples.Services.Users
 
         public IPagedList<User> Search(string username = null, string mobilephone = null, bool? isActive = null, int pageIndex = 0, int pageSize = int.MaxValue)
         {
-            var query = _userRepository.Table;
+            var query = _userReadRepository.Table;
 
             query = query.Where(e => !e.Deleted);
             if (!string.IsNullOrEmpty(username))
@@ -52,7 +55,7 @@ namespace Z.EfCore.NormalSamples.Services.Users
             if (Guid.Empty == Id)
                 return null;
 
-            return _userRepository.Table.FirstOrDefault(e => e.Id == Id);
+            return _userReadRepository.Table.FirstOrDefault(e => e.Id == Id);
         }
 
         public User GetUserByUsername(string username)
@@ -60,7 +63,7 @@ namespace Z.EfCore.NormalSamples.Services.Users
             if (string.IsNullOrWhiteSpace(username))
                 return null;
 
-            return _userRepository.Table.FirstOrDefault(e => e.Username == username);
+            return _userReadRepository.Table.FirstOrDefault(e => e.Username == username);
         }
         #endregion
 

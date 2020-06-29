@@ -6,6 +6,7 @@ using MSSurfing.ThriftServer.NetCore.Processors;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MSSurfing.ThriftServer.NetCore
 {
@@ -19,7 +20,7 @@ namespace MSSurfing.ThriftServer.NetCore
             {
                 try
                 {
-                    Console.WriteLine("please entry cmd: add / search / Overflow / loadallplugins");
+                    Console.WriteLine("please entry cmd: add / search / Overflow / loadallplugins / loop");
                     var cmd = Console.ReadLine();
                     switch (cmd)
                     {
@@ -35,8 +36,9 @@ namespace MSSurfing.ThriftServer.NetCore
                         case "Overflow":
                             Overflow();
                             break;
-
-
+                        case "loop":
+                            Loop();
+                            break;
                         case "exit":
                             isContinue = false;
                             break;
@@ -78,6 +80,21 @@ namespace MSSurfing.ThriftServer.NetCore
         {
             //var result = EngineContext.Resolve<PluginProcessor>().LoadAllPlugins();
             //Console.WriteLine(result);
+        }
+
+        static void Loop()
+        {
+            Parallel.For(1, 100, i =>
+            {
+                using (var scope = EngineContext.BeginLifetimeScope())
+                {
+                    var result = EngineContext.Resolve<UserProcessor>().Add();
+                    Console.WriteLine(result);
+
+                    var result2 = EngineContext.Resolve<UserProcessor>().Search();
+                    Console.WriteLine(result2);
+                }
+            });
         }
         #endregion
     }

@@ -8,7 +8,7 @@ namespace MSSurfing.Data.EntityMapping.Users
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.ToTable("User");
+            builder.ToTable("TestUser");
             builder.HasKey(u => u.Id);
         }
     }

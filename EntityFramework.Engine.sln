@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{519A60FE-7E25-4111-B647-4C9237E62E40}"
 	ProjectSection(SolutionItems) = preProject
@@ -34,15 +34,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microsoft.EntityFrameworkCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.EntityFrameworkCore.Engine", "Src\Microsoft.EntityFrameworkCore.Engine\Microsoft.EntityFrameworkCore.Engine.csproj", "{60E88F47-359F-4515-B0B5-F28973443A7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z.EfCore.NormalSamples", "Samples\XConsoles\Z.EfCore.NormalSamples\Z.EfCore.NormalSamples.csproj", "{EEBA28DA-547A-457B-B584-A10C46ED938A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Z.EfCore.NormalSamples", "Samples\XConsoles\Z.EfCore.NormalSamples\Z.EfCore.NormalSamples.csproj", "{EEBA28DA-547A-457B-B584-A10C46ED938A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSurfing.ThriftServer.NetCore", "Samples\XConsoles\MSSurfing.ThriftServer.NetCore\MSSurfing.ThriftServer.NetCore.csproj", "{28FF11D8-F8BB-4AE9-9E23-3D3B6F5A9242}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSSurfing.ThriftServer.NetCore", "Samples\XConsoles\MSSurfing.ThriftServer.NetCore\MSSurfing.ThriftServer.NetCore.csproj", "{28FF11D8-F8BB-4AE9-9E23-3D3B6F5A9242}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSurfing.Data.NetCore", "Samples\Libraries\MSSurfing.Data.NetCore\MSSurfing.Data.NetCore.csproj", "{EEB41FDA-B7FB-4D22-AA62-167D5143E2FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSSurfing.Data.NetCore", "Samples\Libraries\MSSurfing.Data.NetCore\MSSurfing.Data.NetCore.csproj", "{EEB41FDA-B7FB-4D22-AA62-167D5143E2FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSurfing.Services.NetCore", "Samples\Libraries\MSSurfing.Services.NetCore\MSSurfing.Services.NetCore.csproj", "{E86CD760-7E8F-4055-8A58-3417556AA117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSSurfing.Services.NetCore", "Samples\Libraries\MSSurfing.Services.NetCore\MSSurfing.Services.NetCore.csproj", "{E86CD760-7E8F-4055-8A58-3417556AA117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSurfing.WebApi.NetCore", "Samples\Web\MSSurfing.WebApi.NetCore\MSSurfing.WebApi.NetCore.csproj", "{F588C38B-34C9-4296-B5F1-6B380D3ACC81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSSurfing.WebApi.NetCore", "Samples\Web\MSSurfing.WebApi.NetCore\MSSurfing.WebApi.NetCore.csproj", "{F588C38B-34C9-4296-B5F1-6B380D3ACC81}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0031B9E8-EBDA-4387-B18C-2AD5CE47BBE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.EntityFrameworkCore.Engine.Tests", "Src\Tests\Microsoft.EntityFrameworkCore.Engine.Tests\Microsoft.EntityFrameworkCore.Engine.Tests.csproj", "{D8A86A1C-A96F-4BEC-9760-2F2B7B07C0AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,6 +98,10 @@ Global
 		{F588C38B-34C9-4296-B5F1-6B380D3ACC81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F588C38B-34C9-4296-B5F1-6B380D3ACC81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F588C38B-34C9-4296-B5F1-6B380D3ACC81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8A86A1C-A96F-4BEC-9760-2F2B7B07C0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8A86A1C-A96F-4BEC-9760-2F2B7B07C0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8A86A1C-A96F-4BEC-9760-2F2B7B07C0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8A86A1C-A96F-4BEC-9760-2F2B7B07C0AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,6 +123,8 @@ Global
 		{EEB41FDA-B7FB-4D22-AA62-167D5143E2FD} = {97908C34-F512-4308-83DD-56DEEB7D7E77}
 		{E86CD760-7E8F-4055-8A58-3417556AA117} = {97908C34-F512-4308-83DD-56DEEB7D7E77}
 		{F588C38B-34C9-4296-B5F1-6B380D3ACC81} = {F027378A-50C8-4B2D-B197-0D534DC4B7C5}
+		{0031B9E8-EBDA-4387-B18C-2AD5CE47BBE5} = {8304C5C4-5718-437F-A27B-C6E1E2ABCAAB}
+		{D8A86A1C-A96F-4BEC-9760-2F2B7B07C0AD} = {0031B9E8-EBDA-4387-B18C-2AD5CE47BBE5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {41020523-9597-465F-9110-3788E7538B5F}
